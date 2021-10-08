@@ -1,13 +1,18 @@
 package loggerfile
 
 import (
+	"errors"
 	"os"
 	"path/filepath"
 	"time"
 )
 
 func (o options) Write(p []byte) (n int, err error) {
-	path := time.Now().Format(o.nameFormat)
+	if o.path == "" {
+		return 0, errors.New("path for log file is missing")
+	}
+
+	path := time.Now().Format(o.path)
 	folder := filepath.Dir(path)
 
 	if _, err := os.Stat(folder); os.IsNotExist(err) {

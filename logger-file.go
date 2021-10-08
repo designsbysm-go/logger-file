@@ -5,11 +5,11 @@ import (
 )
 
 type options struct {
-	nameFormat string
+	path string
 }
 
-func New(nameFormat string) io.Writer {
+func New(path string) io.Writer {
 	return options{
-		nameFormat: nameFormat,
+		path: path,
 	}
 }
