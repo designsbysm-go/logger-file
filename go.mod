@@ -1,4 +1,4 @@
-module github.com/designsbysm-go/loggerfile
+module github.com/designsbysm/loggerfile
 
 go 1.16
 
