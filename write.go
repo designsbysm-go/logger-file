@@ -15,6 +15,8 @@ func (o options) Write(p []byte) (n int, err error) {
 		return 0, err
 	}
 
+	// TODO: add max log file size, archive older to name.ext.1
+
 	f, err := o.fs.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		return 0, err
