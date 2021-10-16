@@ -1,4 +1,4 @@
-module github.com/designsbysm/loggerfile
+module github.com/designsbysm/timberfile
 
 go 1.16
 

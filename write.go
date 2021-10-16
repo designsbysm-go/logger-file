@@ -1,4 +1,4 @@
-package loggerfile
+package timberfile
 
 import (
 	"os"

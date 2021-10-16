@@ -1,2 +1,2 @@
 // TODO: add documentation
-package loggerfile
+package timberfile
